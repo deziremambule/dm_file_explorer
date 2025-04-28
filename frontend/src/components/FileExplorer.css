@@ -363,7 +363,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  color: #666;
+  color: #777;
 }
 
 .dark-mode .footer-content {
@@ -488,4 +488,43 @@
   background-color: #333;
   color: white;
   border-color: #555;
+}
+
+.path-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.path-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.path-input::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+/* Dark mode support */
+.dark-mode .path-input {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark-mode .path-input::placeholder {
+  color: #aaa;
+}
+
+.path-examples {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+.dark-mode .path-examples {
+  color: #aaa;
 }

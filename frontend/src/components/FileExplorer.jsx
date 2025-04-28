@@ -15,7 +15,7 @@ import RecursiveExplorer from './RecursiveExplorer';
 const FileExplorer = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [currentPath, setCurrentPath] = useState('');
-  const [inputPath, setInputPath] = useState('');
+  const [inputPath, setInputPath] = useState();
   const [folders, setFolders] = useState([]);
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -46,6 +46,7 @@ const FileExplorer = () => {
   
 const [availableDrives, setAvailableDrives] = useState([]);
 const [currentOS, setCurrentOS] = useState('');
+
 
   // Add this function near the top of your component, before the useEffect hooks
 const detectDefaultDrive = async () => {
@@ -536,13 +537,18 @@ useEffect(() => {
           }}
           className="path-form"
         >
-          <input
-            type="text"
-            value={inputPath}
-            onChange={(e) => setInputPath(e.target.value)}
-            placeholder="Enter directory path (e.g., C:\Users\username\Documents)"
-            className="path-input"
-          />
+<div className="path-input-container">
+  <input
+    type="text"
+    value={inputPath || ''}
+    onChange={(e) => setInputPath(e.target.value)}
+    placeholder="Enter directory path"
+    className="path-input"
+  />
+  <div className="path-examples">
+    Examples: {currentOS === 'nt' ? 'C:\\Users\\username' : '/home/username'}
+  </div>
+</div>
           <button type="submit" className="go-button">Go</button>
         </form>
 
