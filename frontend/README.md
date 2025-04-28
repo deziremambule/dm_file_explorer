@@ -9,7 +9,11 @@ A full-stack file explorer with React frontend and Python backend, featuring:
 - Path history navigation
 
 ![File Explorer Screenshot](screenshot.png) <!-- Add a screenshot if available -->
+![Folder path example](image.png)
+![Results](image-1.png)
 
+![Copying folder structure](image-2.png)
+![Paste folder structure result](image-3.png)
 ## Prerequisites
 
 - Python 3.8+
@@ -40,13 +44,18 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-#if you this error: 
+#if you get this error: 
 # ModuleNotFoundError: No module named 'flask_limiter'
 
 #Run
-#py -m venv venv
-#.\venv\Scripts\Activate
-#pip install flask_limiter
+#1
+py -m venv venv
+
+#2
+.\venv\Scripts\Activate
+
+#3
+pip install flask_limiter
 
 #This should solve it.
 
