@@ -40,5 +40,15 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+#if you this error: 
+# ModuleNotFoundError: No module named 'flask_limiter'
+
+#Run
+#py -m venv venv
+#.\venv\Scripts\Activate
+#pip install flask_limiter
+
+#This should solve it.
+
 # Install Python dependencies
 pip install -r requirements.txt
