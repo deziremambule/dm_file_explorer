@@ -8,7 +8,6 @@ A full-stack file explorer with React frontend and Python backend, featuring:
 - Search functionality
 - Path history navigation
 
-![File Explorer Screenshot](screenshot.png) <!-- Add a screenshot if available -->
 ![Folder path example](image.png)
 ![Results](image-1.png)
 
