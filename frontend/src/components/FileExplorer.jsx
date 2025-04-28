@@ -546,7 +546,7 @@ useEffect(() => {
     className="path-input"
   />
   <div className="path-examples">
-    Examples: {currentOS === 'nt' ? 'C:\\Users\\username' : '/home/username'}
+    Examples: {currentOS === 'nt' ? 'C:\\Users\\username\\Documents\\folder' : '/home/username/documents/folder'}
   </div>
 </div>
           <button type="submit" className="go-button">Go</button>
